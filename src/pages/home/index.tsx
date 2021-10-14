@@ -4,7 +4,6 @@ import "./index.less";
 
 interface Home {
   name: string;
-
 }
 const Home: React.FC<Home> = (props) => {
   const { name } = props;
