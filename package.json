@@ -27,6 +27,7 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
+    "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
   "browserslist": [
@@ -43,6 +44,7 @@
     "@tarojs/taro": "3.3.3",
     "airbnb": "^0.0.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.3",
     "mobx": "^6.3.3",
@@ -52,11 +54,11 @@
     "prettier": "^2.4.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-prettier": "^9.0.2",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.2.0"
+    "stylelint": "^14.0.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
@@ -67,12 +69,28 @@
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "babel-preset-taro": "3.3.3",
-    "eslint": "^8.0.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-taro": "3.3.3",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "stylelint": "^13.13.1",
+    "prettier-eslint": "^13.0.0",
+    "stylelint": "^14.0.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
     "typescript": "^4.1.0"
+  },
+  "lint-staged": {
+    "src/**/*.{html,json}": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
