@@ -1,0 +1,13 @@
+/dist
+/node_modules
+*.d.ts
+*.svg
+*.ico
+*.json
+.gitignore
+*.md
+*.log
+*.lock
+
+src/.tmp/*
+src/components/iconfont/*
