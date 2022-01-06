@@ -3925,7 +3925,7 @@ process.umask = function() { return 0; };
   !*** ./node_modules/react/cjs/react-jsx-runtime.production.min.js ***!
   \********************************************************************/
 /*! no static exports found */
-/*! exports used: jsx */
+/*! exports used: jsx, jsxs */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
