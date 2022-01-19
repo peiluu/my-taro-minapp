@@ -24,6 +24,7 @@ export default class Index extends Component {
     return (
       <View className={styles['p--home']}>
         <Text>Hello world!</Text>
+        <Text>Hello world!</Text>
       </View>
     )
   }
