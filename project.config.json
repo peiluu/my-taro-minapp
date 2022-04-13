@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "snake-game",
+  "projectname": "my-taro-minapp",
   "description": "贪吃蛇小游戏",
   "appid": "wx1b26ca38c8e7c5e5",
   "setting": {

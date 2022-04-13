@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'snake-game',
+  projectName: 'my-taro-minapp',
   date: '2021-10-14',
   designWidth: 750,
   deviceRatio: {

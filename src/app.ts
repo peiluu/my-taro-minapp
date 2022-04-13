@@ -1,23 +1,22 @@
-import { Component } from 'react'
+import { Component } from 'react';
 import { observable, action, computed, useStrict } from 'mobx';
-import './app.less'
+import './app.less';
 
 class App extends Component {
+  componentDidMount() {}
 
-  componentDidMount() { }
+  componentDidShow() {}
 
-  componentDidShow() { }
+  componentDidHide() {}
 
-  componentDidHide() { }
-
-  componentDidCatchError() { }
+  componentDidCatchError() {}
 
   // this.props.children 是将要会渲染的页面
   render() {
     console.log('第一次提交');
     console.log(222222222);
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default App
+export default App;

@@ -13,6 +13,7 @@ module.exports = {
     es6: true,
   },
   plugins: ['@typescript-eslint', 'react'],
+
   extends: [
     'airbnb',
     'airbnb/hooks',
@@ -26,7 +27,7 @@ module.exports = {
       typescript: {},
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.js', '.jsx'],
     },
   },
   rules: {

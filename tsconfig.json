@@ -15,16 +15,35 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "jsx": "react-jsx",
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
+    "jsxFragmentFactory": "React.Fragment",
     "typeRoots": [
-      "node_modules/@types",
+      "c/@types",
       "global.d.ts"
-    ]
+    ],
+    "paths": {
+      "@@/*": [
+        "./src/*"
+      ],
+      "@com/*": [
+        "./src/components/*"
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@res/*": [
+        "./src/resource/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ]
+    }
   },
   "exclude": [
-    "node_modules",
+    "c",
     "dist"
   ],
   "compileOnSave": false
