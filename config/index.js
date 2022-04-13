@@ -1,3 +1,6 @@
+import path from 'path';
+
+
 const config = {
   projectName: 'my-taro-minapp',
   date: '2021-10-14',
@@ -11,6 +14,14 @@ const config = {
   outputRoot: 'dist',
   plugins: [],
   defineConstants: {
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
+    '@com': path.resolve(__dirname, '..', 'src/components'),
+    '@config': path.resolve(__dirname, '..', 'src/config'),
+    '@res': path.resolve(__dirname, '..', 'src/resources'),
+    // '@utils': path.resolve(__dirname, '..', 'src/utils'),
+
   },
   copy: {
     patterns: [
@@ -60,11 +71,11 @@ const config = {
       }
     }
   }
-}
+};
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+    return merge({}, config, require('./dev'));
   }
-  return merge({}, config, require('./prod'))
-}
+  return merge({}, config, require('./prod'));
+};
