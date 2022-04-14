@@ -1,4 +1,5 @@
 const path = require('path');
+const { off } = require('process');
 
 module.exports = {
   extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended'],
@@ -28,8 +29,15 @@ module.exports = {
   rules: {
     semi: [2, 'always'], // 缩进字符串
     'import/no-unassigned-import': 0,
+    // 'import/no-unresolved': 0,
     'no-console': 0,
     'no-unused-vars': 0,
+    // 'import/extensions': [2, 'never', { 'web.js': 'never', json: 'never' }],
+    'import/extensions': 0,
+    // 'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+    'import/no-extraneous-dependencies': 0,
+    // 'import/no-unresolved': [2, { ignore: ['antd-mobile'] }],
+    'import/no-unresolved': 0,
 
     // typescript rules fix
     'no-shadow': 0,
@@ -38,16 +46,16 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 0,
     'no-use-before-define': 0,
     '@typescript-eslint/no-use-before-define': [2],
-    'import/extensions': [
-      2,
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    // 'import/extensions': [
+    //   2,
+    //   'ignorePackages',
+    //   {
+    //     js: 'never',
+    //     jsx: 'never',
+    //     ts: 'never',
+    //     tsx: 'never',
+    //   },
+    // ],
 
     // jsx rules fix
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
@@ -59,8 +67,8 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 0,
 
     // airbnb rules fix
-    'no-param-reassign': [2, { props: false }], // allow object prop mutation
-    'import/no-extraneous-dependencies': 0,
+    // 'no-param-reassign': [2, { props: false }], // allow object prop mutation
+    // 'import/no-extraneous-dependencies': 0,
     'class-methods-use-this': [2, { enforceForClassFields: false }],
     'react-hooks/exhaustive-deps': 0,
   },

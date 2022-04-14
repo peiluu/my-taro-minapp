@@ -1,6 +1,5 @@
 import path from 'path';
 
-
 const config = {
   projectName: 'my-taro-minapp',
   date: '2021-10-14',
@@ -16,11 +15,8 @@ const config = {
   defineConstants: {
   },
   alias: {
-    '@': path.resolve(__dirname, '..', 'src'),
-    '@com': path.resolve(__dirname, '..', 'src/components'),
-    '@config': path.resolve(__dirname, '..', 'src/config'),
-    '@res': path.resolve(__dirname, '..', 'src/resources'),
-    // '@utils': path.resolve(__dirname, '..', 'src/utils'),
+    "@": path.resolve(__dirname,'../', "src"),
+    "@/com": path.resolve(__dirname, '../', "src/components")
 
   },
   copy: {

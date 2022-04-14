@@ -58,10 +58,7 @@ export default (longitude: number, latitude: number) => {
     let s =
       2 *
       Math.asin(
-        Math.sqrt(
-          Math.pow(Math.sin(La3 / 2), 2) +
-            Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)
-        )
+        Math.sqrt(Math.sin(La3 / 2) ** 2 + Math.cos(La1) * Math.cos(La2) * Math.sin(Lb3 / 2) ** 2)
       );
     s *= 6378.137;
     s = Math.round(s * 10000) / 10000;

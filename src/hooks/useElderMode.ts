@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Taro, { useDidHide, useDidShow } from '@tarojs/taro';
-import { ELDER_MODE_TYPE } from '@@/config/constant';
-import { get as getGlobalData, set as setGlobalData } from '@utils/globaldata';
+// import { get as getGlobalData, set as setGlobalData } from '@utils/globaldata';
+import { ELDER_MODE_TYPE } from '@/config/constant';
 // import * as request from '@utils/request';
 
 interface ELDERS_ENTRY {
@@ -91,4 +91,34 @@ export const useElderMode = () => {
     eldersEntry: eldersEntryData,
     onToogleElderMode,
   };
+};
+
+/**
+ * 自定义hooks, use开头的一个函数，内部可以使用其他的hook
+ * @returns useTodo
+ */
+export const useFunc = () => {
+  useDidShow(() => {
+    console.log('触发useDidShow');
+  });
+  const [number, setNumber] = useState(1);
+  useDidShow(() => {
+    console.log(`触发useDidShow, 输出number的值=${number}`);
+  });
+  return {
+    useTodo: '一个自定义hook函数',
+  };
+};
+
+/**
+ * react函数式组件，大写开头的函数
+ */
+export const Index = () => {
+  useDidShow(() => {
+    console.log('触发useDidShow');
+  });
+  const [number, setNumber] = useState(1);
+  useDidShow(() => {
+    console.log(`触发useDidShow, 输出number的值=${number}`);
+  });
 };
