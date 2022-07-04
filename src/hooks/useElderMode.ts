@@ -43,14 +43,14 @@ export const useElderMode = () => {
   // 更新长辈模式配置全局缓存
   const updateEldersEntry = config => {
     Taro.setStorageSync(ELDER_MODE_STROAGE_KEY, config);
-    setGlobalData(ELDER_MODE_STROAGE_KEY, config);
+    // setGlobalData(ELDER_MODE_STROAGE_KEY, config);
   };
 
   // 初始化长辈模式配置
   const initIsElderMode = async () => {
-    const storageEldersEntry = getGlobalData(ELDER_MODE_STROAGE_KEY);
-    if (!storageEldersEntry) return;
-    updateEldersEntry(storageEldersEntry);
+    // const storageEldersEntry = getGlobalData(ELDER_MODE_STROAGE_KEY);
+    // if (!storageEldersEntry) return;
+    // updateEldersEntry(storageEldersEntry);
   };
 
   // 更新或切换长辈模式
@@ -103,6 +103,7 @@ export const useFunc = () => {
   });
   const [number, setNumber] = useState(1);
   useDidShow(() => {
+    setNumber(2);
     console.log(`触发useDidShow, 输出number的值=${number}`);
   });
   return {
@@ -118,7 +119,7 @@ export const Index = () => {
     console.log('触发useDidShow');
   });
   const [number, setNumber] = useState(1);
-  useDidShow(() => {
-    console.log(`触发useDidShow, 输出number的值=${number}`);
-  });
+  // useDidShow(() => {
+  //   console.log(`触发useDidShow, 输出number的值=${number}`);
+  // });
 };
