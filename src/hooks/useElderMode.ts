@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Taro, { useDidHide, useDidShow } from '@tarojs/taro';
 // import { get as getGlobalData, set as setGlobalData } from '@utils/globaldata';
+import { intercept } from 'mobx';
 import { ELDER_MODE_TYPE } from '@/config/constant';
 // import * as request from '@utils/request';
 
@@ -94,7 +95,7 @@ export const useElderMode = () => {
 };
 
 /**
- * 自定义hooks, use开头的一个函数，内部可以使用其他的hook
+ * 自定义hooks, use开头的一个函数，内部可以使用其他的hook（和函数方法不同的地方）
  * @returns useTodo
  */
 export const useFunc = () => {

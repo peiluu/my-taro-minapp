@@ -6,12 +6,12 @@ import styles from './index.less';
 
 function Index() {
   const { useTodo } = useFunc();
-  console.log(useTodo);
+
   return (
     <View className={styles['p--home']}>
       <Text>Hello world!</Text>
       <Text>Hello world!</Text>
-      <Text>Hello world!</Text>
+      {/* <Text>Hello world!</Text> */}
     </View>
   );
 }
